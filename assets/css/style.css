@@ -1,6 +1,28 @@
+html{
+    height: 100%;
+    background: url(../images/traintrack.jpeg);
+    background-size: cover;
+}
+body{
+    background: #ffffff00
+}
 .card {
     margin-bottom: 20px;
 }
 label {
     font-weight: bold;
+}
+.jumbotron{
+    background-image: url(../images/blacktrain.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: orange;
+
+}
+
+h1,
+h4{
+    color: white;
+    -webkit-text-stroke: 1px black;
 }
