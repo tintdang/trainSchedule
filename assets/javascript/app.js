@@ -50,6 +50,7 @@ db.ref().on("child_added", function(snap){
     //Figure out when is the next train time
 
     var momentConvert = moment(sv.firstTrainTime, "HH:mm")
+    console.log(momentConvert)
     //Tke the differences between now and the minutes from the start time
     var diffMinutes = moment().diff(moment(momentConvert), "minutes");
     console.log(diffMinutes)
@@ -57,7 +58,7 @@ db.ref().on("child_added", function(snap){
     //check if there is a remainder
     var remainder = diffMinutes % sv.frequency;
 
-    if(remainder < 0){
+    if(remainder < 0) {
         var nextTrain = momentConvert;
         var minutesAway = Math.abs(diffMinutes);
     } else{
@@ -77,3 +78,5 @@ db.ref().on("child_added", function(snap){
     // append table row into HTML in #trains ID
     $("#trains").append(row)
 })
+
+// snapshot.key to remove owo
