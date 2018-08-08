@@ -47,30 +47,13 @@ db.ref().on("child_added", function(snap){
     row.append($("<td>" + sv.destination +"</td>"))
     row.append($("<td>" + sv.frequency +"</td>"))
 
-    // //convert firstTrainTime from military time to AM/PM
-    // var timeConverted = moment(sv.firstTrainTime, "HH:mm");
-    // var convert = (moment(timeConverted).format("hh:mm a"));
-
-    // //How to calculate minutes away using frequency and next arival time, must be using moment.js
-    // //call the current moment of time, see what the difference is in from the firstTrainTime and convert that into minutes
-    // var timeDiff = moment().diff(moment(timeConverted), "minutes");
-
-    // //Check if there is a remainder of time between the first time and total amount of minutes away it is; only applies if there is a remainder
-    // var remainder = timeDiff % sv.frequency;
-
-    // //if the remainder is less than 0
-    // if (remainder < 0) {
-    //     var minutesAway = timeDiff
-    // } else{
-    //     var minuteAway = sv.frequency
-    // }
-
     //Figure out when is the next train time
 
-    var momentConvert = moment(sv.firstTrainTime, "hh:mm")
+    var momentConvert = moment(sv.firstTrainTime, "HH:mm")
     //Tke the differences between now and the minutes from the start time
     var diffMinutes = moment().diff(moment(momentConvert), "minutes");
-
+    console.log(diffMinutes)
+    console.log(sv.frequency)
     //check if there is a remainder
     var remainder = diffMinutes % sv.frequency;
 
