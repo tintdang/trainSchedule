@@ -11,6 +11,9 @@
     <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
     <!-- css file -->
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
+
+
     <title>Train Schedule</title>
 </head>
 
@@ -25,11 +28,21 @@
             <div class="card-body">
                 <table class="table">
                     <thead>
-                        <th scope="col">Train Name</th>
-                        <th scope="col">Destination</th>
-                        <th scope="col">Frequency (min)</th>
-                        <th scope="col">Next Arrival</th>
-                        <th scope="col">Minutes Away</th>
+                        <th scope="col">Train Name
+                            <i class="fas fa-train"></i>
+                        </th>
+                        <th scope="col">Destination <i class="fas fa-map-marker-alt"></i>
+
+                        </th>
+                        <th scope="col">Frequency (min) <i class="fas fa-clock"></i>
+
+                        </th>
+                        <th scope="col">Next Arrival <i class="fas fa-angle-right"></i>
+
+                        </th>
+                        <th scope="col">Minutes Away <i class="fas fa-angle-double-right"></i>
+
+                        </th>
                     </thead>
                     <tbody id="trains">
                         <!-- make a loading feature by just making a div disappear -->

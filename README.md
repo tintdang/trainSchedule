@@ -8,3 +8,6 @@
   * Code this app to calculate when the next train will arrive; this should be relative to the current time.      
   * Users from many different machines must be able to view same train times.      
   * Styling and theme are completely up to you. Get Creative!
+
+
+- [ ] make a night mode with addClass/removeClass
